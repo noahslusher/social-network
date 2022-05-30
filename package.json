@@ -1,28 +1,58 @@
 {
   
   "name": "social-network",
+  
   "description": "",
+  
   "version": "1.0.0",
+  
   "main": "index.js",
-  "devDependencies": {},
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  
+    
+  "test": "echo \"Error: no test specified\" && exit 1",
+  
+    
+  "start": "node server.js"
+  
   },
+  
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/noahslusher/social-network.git"
+  
+    
+  "type": "git",
+  
+    
+  "url": "git+https://github.com/noahslusher/social-network.git"
+  
   },
+  
   "keywords": [],
+  
   "author": "",
+  
   "license": "ISC",
+  
   "bugs": {
-    "url": "https://github.com/noahslusher/social-network/issues"
+  
+    
+  "url": "https://github.com/noahslusher/social-network/issues"
+  
   },
+  
   "homepage": "https://github.com/noahslusher/social-network#readme",
   
   "dependencies": {
-    "express": "^4.18.1",
-    "mongoose": "^6.3.4"
+  
+    
+  "express": "^4.18.1",
+  
+    
+  "mongoose": "^6.3.4",
+  
+    
+  "mongoose-validator": "^2.1.0"
+  
   }
 }

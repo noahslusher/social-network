@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model, Types } = require('mongoose')
 const dateFormat = require('../utils/dateFormat')
 
 const UserSchema = new Schema (
@@ -40,3 +40,7 @@ const UserSchema = new Schema (
 UserSchema.virtual('friendCount').get(function() {
  return this.friends.length
 })
+
+const User = model('User', UserSchema)
+
+module.exports = User
