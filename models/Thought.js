@@ -2,13 +2,7 @@ const { Schema, model, Types } = require('mongoose')
 const dateFormat = require('../utils/dateFormat')
 let validate = require('mongoose-validator')
 
-var nameValidator = [
- validate ({
-  validator: 'isLength',
-  arguments: [1, 280],
-  message: 'Thought text must be within 1 and 280 characters'
- })
-]
+
 const reactionSchema = new Schema (
  {
   reactionId: {
@@ -18,7 +12,7 @@ const reactionSchema = new Schema (
   reactionBody: {
    type: String,
    required: true,
-   validate: nameValidator
+   maxlength: 280
   },
   username: {
    type: String,
@@ -41,7 +35,8 @@ const ThoughtSchema = new Schema (
  thoughtText: {
   type: String,
   required: true,
-  validate: nameValidator
+  minLength: 1,
+  maxLength: 280
  },
  createdAt: {
   type: Date,
@@ -58,7 +53,8 @@ const ThoughtSchema = new Schema (
  toJSON: {
   virtuals: true,
    getters: true
- }
+ },
+ id: false
 }
 )
 
